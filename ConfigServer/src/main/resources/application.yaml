@@ -1,0 +1,21 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: CONFIG-SERVER
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vikas-1234/microservices-config
+          clone-on-start: true
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8080/eureka
+#  instance:
+#    prefer-ip-address: true
